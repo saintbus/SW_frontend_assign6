@@ -48,6 +48,7 @@ export default function CardPanel() {
             </div>
             <div className="ml-10 mb-10">
                 { Array.from(venueList).map(([venue, rating]) => <div 
+                data-testid={venue}
                 onClick={() => dispatchRating({type:'remove', venueName:venue})}
                 key={venue}>{venue} : {rating}</div>) } 
             </div>
